@@ -17,9 +17,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
 from .views import health_check
-
+from mycore.views import api_serializer, RoomView, TenantView, JournalView, RoomListView, RoomDetailView, \
+    TenantListView, TenantDetailView, JournalListView, JournalDetailView
 
 static_patterns = static(settings.MEDIA_URL,
                          document_root=settings.MEDIA_ROOT) + \
@@ -29,4 +31,15 @@ static_patterns = static(settings.MEDIA_URL,
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('healthcheck/', health_check, name='health_check'),
+    path('index/', TemplateView.as_view(template_name='index.html')),
+    path('api/<str:object_model>/<int:object_id>', api_serializer, name='api_serializer'),
+    path('form-room/', RoomView.as_view(), name='form_room'),
+    path('allrooms/', RoomListView.as_view(), name='all_room'),
+    path('allrooms/<slug:pk>/', RoomDetailView.as_view(), name='room'),
+    path('form-tenant/', TenantView.as_view(), name='form_tenant'),
+    path('alltenants/', TenantListView.as_view(), name='all_tenants'),
+    path('alltenants/<slug:pk>/', TenantDetailView.as_view(), name='tenant'),
+    path('form-journal/', JournalView.as_view(), name='form_journal'),
+    path('alljournal/', JournalListView.as_view(), name='all_journal'),
+    path('alljournal/<slug:pk>/', JournalDetailView.as_view(), name='journal_entry'),
 ] + static_patterns

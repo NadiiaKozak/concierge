@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room</title>
+</head>
+<body>
+<p>
+    <form method="post">
+        {% csrf_token %}
+        <label>Please enter number room</label>
+        <input type="text" name="number_room">
+        <label>Please enter max tenants</label>
+        <input type="text" name="max_tenants">
+        <label>Please enter status room</label>
+        <input type="text" name="status_room">
+        <input type="submit"/>
+        <input type="reset"/>
+    </form>
+</p>
+</body>
+</html>

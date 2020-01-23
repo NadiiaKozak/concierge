@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tenant</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <label>Please enter first name</label>
+    <input type="text" name="first_name">
+    <label>Please enter last name</label>
+    <input type="text" name="last_name">
+    <label>Please enter date of birth </label>
+    <input type="text" name="date_of_birth">
+    <label>Please enter phone </label>
+    <input type="text" name="phone">
+    <label>Please enter notes </label>
+    <input type="text" name="notes">
+    <input type="submit"/>
+    <input type="reset"/>
+</form>
+</body>
+</html>

@@ -27,7 +27,7 @@ SECRET_KEY = 'a5-dtc!&0p!n)r#hkd613c*iu8zwr9pj03*z=$cyr1h6$e-!b+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'concierge.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,10 +81,10 @@ DATABASES = {
         'NAME': 'concierge_db',
         'USER': 'concierge_dev',
         'PASSWORD': 'concierge_dev',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': 5432,
         'TEST': {
-            'HOST': 'localhost',
+            'HOST': 'db',
             'PORT': 5432,
             'NAME': 'concierge_test_db',
             'USER': 'concierge_dev',
