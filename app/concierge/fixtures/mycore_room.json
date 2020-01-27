@@ -1,0 +1,26 @@
+[
+{"model": "mycore.room",
+    "pk": 1,
+    "fields": {
+        "number_room": 2,
+        "max_tenants":2,
+        "status": "free"
+        }
+},
+{"model": "mycore.room",
+    "pk": 2,
+    "fields": {
+        "number_room": 3,
+        "max_tenants":2,
+        "status": "free"
+        }
+},
+{"model": "mycore.room",
+    "pk": 3,
+    "fields": {
+        "number_room":4,
+        "max_tenants":1,
+        "status": "reserved"
+        }
+}
+]

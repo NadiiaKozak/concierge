@@ -27,7 +27,7 @@ SECRET_KEY = 'a5-dtc!&0p!n)r#hkd613c*iu8zwr9pj03*z=$cyr1h6$e-!b+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -80,11 +80,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'concierge_db',
         'USER': 'concierge_dev',
-        'PASSWORD': 'simplepass',
-        'HOST': 'db',
+        'PASSWORD': 'concierge_dev',
+        'HOST': 'localhost',
         'PORT': 5432,
         'TEST': {
-            'HOST': 'db',
+            'HOST': 'localhost',
             'PORT': 5432,
             'NAME': 'concierge_test_db',
             'USER': 'concierge_dev',
@@ -167,3 +167,5 @@ LOGGING = {
     },
 }
 # dictConfig(LOGGING)
+
+FIXTURE_DIRS = []

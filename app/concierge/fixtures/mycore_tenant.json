@@ -1,0 +1,29 @@
+[
+  {"model": "mycore.tenant",
+    "pk": 1,
+    "fields": {
+      "first_name": "Nadiia",
+      "last_name": "Kozak",
+      "date_of_birth": "1977-04-08",
+      "phone": "+38067777777"
+    }
+  },
+  {"model": "mycore.tenant",
+    "pk": 2,
+    "fields": {
+      "first_name": "Vira",
+      "last_name": "Ivanciv",
+      "date_of_birth": "1987-10-09",
+      "phone": "+3806888888"
+    }
+  },
+  {"model": "mycore.tenant",
+    "pk": 3,
+    "fields": {
+      "first_name": "Lyubov",
+      "last_name": "Petriv",
+      "date_of_birth": "1997-12-20",
+      "phone": "+38069999999"
+    }
+  }
+]
