@@ -5,12 +5,12 @@
     <title>ALL ROOMS</title>
 </head>
 <body>
+<h1> The page was cached</h1>
 <table border="1">
     <tr>
         <ul>
             {% for room in object_list%}
             <td>
-                <!--    <li><a href="{{number_room}}"> Number room {{ room.number_room }}</a></li>-->
                 <li><p>Number room : {{room.number_room}}</p>
                     <p>max_tenants : {{room.max_tenants}}</p>
                     <p>status : {{room.status}}</p>
