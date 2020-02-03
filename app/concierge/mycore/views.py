@@ -1,11 +1,11 @@
 # Create your views here.
+import time
 from http import HTTPStatus
 
 from django.core import serializers
 from django.core.serializers import SerializerDoesNotExist
 from django.http import HttpResponse
 from django.views.generic import FormView, ListView, DetailView
-
 from mycore.forms import RoomForm, TenantForm, JournalForm
 
 from . import models
@@ -77,6 +77,7 @@ class RoomDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['room'] = models.Room.objects.get(id=self.kwargs.get('pk'))
+        time.sleep(2)
         return context
 
 
